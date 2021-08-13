@@ -11,6 +11,7 @@ public class Boathealth : MonoBehaviour
   public GameObject boyancy2;
   public GameObject boyancy3;
   public GameObject boyancy4;
+  public GameObject explosionpref;
   public string tag;
   public GameObject victory;
   private bool defeat=false;
@@ -22,6 +23,8 @@ public class Boathealth : MonoBehaviour
     if(collision.gameObject.tag == tag && Health>0)
     {
         Health--;
+        GameObject explosion = Instantiate(explosionpref, transform);
+        explosion.transform.position=collision.gameObject.transform.position;
         Destroy(collision.gameObject); //This destroys the colliding object.
         Debug.Log("hit_boat");
         boyancy1.GetComponent<Objfloat>().depthtreshold+=1f;

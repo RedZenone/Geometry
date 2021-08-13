@@ -11,6 +11,7 @@ public class Towershooting : MonoBehaviour
   public float shootdelay;
   public float shoottimer;
   public float aimvariant;
+  public float aimingangle;
   public Vector3 boatposition;
 
   private GameObject boat;
@@ -31,17 +32,18 @@ public class Towershooting : MonoBehaviour
     {
         shootdelay -= Time.deltaTime;
     }
-
-    if (tower.GetComponent<Tower>().angle<30)
+    
+    if (tower.GetComponent<Tower>().angle<aimingangle && boat.GetComponent<Boathealth>().Health>0)
     {
       if (direction.magnitude<distanceof_shooting && shootdelay<=0)
       {
           shootdelay=shoottimer;
-          float x = Random.Range(-aimvariant, aimvariant*2);
+          float x = Random.Range(-aimvariant, aimvariant);
           float z = Random.Range(-aimvariant*2, aimvariant*4);
           Vector3 newboatposition=  new Vector3(boat.transform.position.x+x,boat.transform.position.y,boat.transform.position.z+z);
           Debug.DrawLine(tower.transform.position, newboatposition, Color.green, 10f);
           Shoot(newboatposition);
+          aimvariant=aimvariant*0.9f;
       }
     }
   }

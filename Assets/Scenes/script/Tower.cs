@@ -8,6 +8,7 @@ public class Tower : MonoBehaviour
     public float angle;
     public Vector3 boatposition;
     public Vector3 direction;
+    public float aimingangle;
 
     private GameObject boat;
 
@@ -24,7 +25,7 @@ public class Tower : MonoBehaviour
 
       angle = Vector3.Angle(alanglezero, direction);
 
-      if (angle<30) {
+      if (angle<aimingangle) {
           Quaternion _lookRotation = Quaternion.LookRotation(direction.normalized);
           transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * 2);
       }
