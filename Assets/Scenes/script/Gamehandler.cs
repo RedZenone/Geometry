@@ -13,13 +13,14 @@ public class Gamehandler : MonoBehaviour
       Placewater();
     }
 
+public int estensione;
 
 // map creation
 //______________________________________________________________________________
     private void Placewater()
     {
-      for (int x=0; x<16; x++) {
-        for (int z=0; z<16; z++) {
+      for (int x=0; x<estensione; x++) {
+        for (int z=0; z<estensione; z++) {
           //Instantiate(waterprefab, new Vector3(x*10-50, 0, z*10-50), Quaternion.identity);
           GameObject water = Instantiate(waterprefab, transform);
 
@@ -29,6 +30,7 @@ public class Gamehandler : MonoBehaviour
       }
     }
 
+/*
     public void PlaceProps()
     {
       int ntowers=8;
@@ -42,6 +44,7 @@ public class Gamehandler : MonoBehaviour
       }
 
       //populate
+      
       while(ntowers>0 && nrocks>0)
       {
         for (int x=-2; x<3; x++) {
@@ -109,7 +112,7 @@ public class Gamehandler : MonoBehaviour
       int randomx=Random.Range(-50, 51);
       int randomy=Random.Range(-50, 51);
       mtransform.position = new Vector3(200*x + randomx, -10, 200*y + randomy);
-    }
+    }*/
 
 //______________________________________________________________________________
 

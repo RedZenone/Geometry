@@ -61,6 +61,8 @@
      <Compile Include="Assets\Scenes\script\Compass.cs" />
      <Compile Include="Assets\Scenes\script\Gamehandler.cs" />
      <Compile Include="Assets\Scenes\script\Isometricfollow.cs" />
+     <Compile Include="Assets\Scenes\script\LevelLoader.cs" />
+     <Compile Include="Assets\Scenes\script\MainMenu.cs" />
      <Compile Include="Assets\Scenes\script\MathParabola.cs" />
      <Compile Include="Assets\Scenes\script\Tower.cs" />
      <Compile Include="Assets\Scenes\script\TowerCannonball.cs" />
