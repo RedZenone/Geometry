@@ -1106,7 +1106,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: NAVAL TRAJECTORY
+  m_Text: CANNON TRAJECTORY
 --- !u!222 &1019118357
 CanvasRenderer:
   m_ObjectHideFlags: 0
