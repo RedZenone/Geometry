@@ -17,6 +17,7 @@ public class Boathealth : MonoBehaviour
   private bool defeat=false;
   public Text healthtext;
   public Text health2text;
+  public AudioSource explosion_sound;
   
   void OnCollisionEnter ( Collision collision )
   {
@@ -25,6 +26,7 @@ public class Boathealth : MonoBehaviour
         Health--;
         GameObject explosion = Instantiate(explosionpref, transform);
         explosion.transform.position=collision.gameObject.transform.position;
+        explosion_sound.Play();
         Destroy(collision.gameObject); //This destroys the colliding object.
         Debug.Log("hit_boat");
         boyancy1.GetComponent<Objfloat>().depthtreshold+=1f;
@@ -51,7 +53,7 @@ public class Boathealth : MonoBehaviour
   {
     if(!defeat)
     {
-      if(transform.position.x<100 && transform.position.x>0 && transform.position.z>70 && transform.position.z<170)
+      if(transform.position.x<100 && transform.position.x>0 && transform.position.z>70 && transform.position.z<170 && Health>0)
       {
         victory.active=true;
       }        

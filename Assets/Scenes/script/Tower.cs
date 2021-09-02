@@ -9,6 +9,8 @@ public class Tower : MonoBehaviour
     public Vector3 boatposition;
     public Vector3 direction;
     public float aimingangle;
+    public GameObject alzata;
+    public Vector3 alzatavec;
 
     private GameObject boat;
 
@@ -28,7 +30,21 @@ public class Tower : MonoBehaviour
       if (angle<aimingangle) {
           Quaternion _lookRotation = Quaternion.LookRotation(direction.normalized);
           transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * 2);
+
+          /*float alzx= direction.x/2f;
+          float alzz=direction.z/2f;
+          float alzy=Mathf.Sqrt(alzx*alzx+alzz*alzz);
+          alzatavec= new Vector3(alzx,alzy,alzz);
+          alzata.transform.position=transform.position+alzatavec;*/
       }
     }
 
+    public void Alzata()
+    {
+        float alzx= direction.x/2f;
+        float alzz=direction.z/2f;
+        float alzy=Mathf.Sqrt(alzx*alzx+alzz*alzz);
+        alzatavec= new Vector3(alzx,alzy,alzz);
+        alzata.transform.position=transform.position+alzatavec;
+    }
 }

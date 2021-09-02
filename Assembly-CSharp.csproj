@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scenes\script\Bezier.cs" />
      <Compile Include="Assets\Scenes\script\Boathealth.cs" />
      <Compile Include="Assets\Scenes\script\Boatshoot.cs" />
      <Compile Include="Assets\Scenes\script\Boatstearing.cs" />
@@ -85,6 +86,7 @@
      <Compile Include="Assets\True Explosions\System\Scripts\exploders\Exploder.cs" />
      <Compile Include="Assets\True Explosions\System\Scripts\exploders\Exploder2D.cs" />
      <Compile Include="Assets\True Explosions\System\Scripts\exploders\SphereExploder.cs" />
+     <None Include="Assets\Understone\Free Orient Pack\readme.txt" />
      <None Include="Assets\True Explosions\System\Shaders\SphereVolumetricExplosion.shader" />
      <None Include="Assets\Cartoon Castle Building Kit\ReadMe.txt" />
  <Reference Include="Unity.Timeline.Editor">

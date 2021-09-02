@@ -6,6 +6,7 @@ public class Towershooting : MonoBehaviour
 {
   public GameObject cannonballpref;
   public GameObject tower;
+  public GameObject alzata;
   public float distanceof_shooting;
   public float distanceof_boat;
   public float shootdelay;
@@ -13,6 +14,7 @@ public class Towershooting : MonoBehaviour
   public float aimvariant;
   public float aimingangle;
   public Vector3 boatposition;
+  public AudioSource cannonsound;
 
   private GameObject boat;
 
@@ -37,11 +39,13 @@ public class Towershooting : MonoBehaviour
     {
       if (direction.magnitude<distanceof_shooting && shootdelay<=0)
       {
+          tower.GetComponent<Tower>().Alzata();
           shootdelay=shoottimer;
           float x = Random.Range(-aimvariant, aimvariant);
           float z = Random.Range(-aimvariant*2, aimvariant*4);
           Vector3 newboatposition=  new Vector3(boat.transform.position.x+x,boat.transform.position.y,boat.transform.position.z+z);
           Debug.DrawLine(tower.transform.position, newboatposition, Color.green, 10f);
+          Debug.Log("shoot");
           Shoot(newboatposition);
           aimvariant=aimvariant*0.9f;
       }
@@ -51,6 +55,7 @@ public class Towershooting : MonoBehaviour
   private void Shoot(Vector3 newboatposition)
   {
     GameObject cannonball = Instantiate(cannonballpref, transform);
-    cannonball.GetComponent<TowerCannonball>().Setup(tower.transform.position,newboatposition);
+    cannonball.GetComponent<TowerCannonball>().Setup(tower.transform.position,newboatposition,alzata.transform.position);
+    cannonsound.Play();
   }
 }

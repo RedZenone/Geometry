@@ -97,8 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterprefab: {fileID: 6400789736339824963, guid: a4657372fcb10e34281fa0a51908a577,
     type: 3}
-  Tower: {fileID: 5858108685031417127, guid: 8d3d29d7cfdf98d42873f205a4e015ed, type: 3}
-  Rock: {fileID: 117232, guid: d2f192c371f0f7f408ef6d3471aa68ca, type: 3}
+  estensione: 0
 --- !u!114 &4219104894961176133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +119,13 @@ MonoBehaviour:
   restright: {fileID: 0}
   startright: {fileID: 0}
   player: {fileID: 0}
+  shootdelaye: 0
+  shootdelayq: 0
+  shoottimer: 1.5
+  verde: {fileID: 2100000, guid: 2f30d1e9d091ad941b3a04eb058273b1, type: 2}
+  rosso: {fileID: 2100000, guid: 4bb83ddeccc194a4a9a92ec2354f14f6, type: 2}
+  sferaleft: {fileID: 0}
+  sferaright: {fileID: 0}
 --- !u!114 &4219104894961176138
 MonoBehaviour:
   m_ObjectHideFlags: 0
