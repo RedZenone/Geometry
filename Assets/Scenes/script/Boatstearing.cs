@@ -25,7 +25,7 @@ public class Boatstearing : MonoBehaviour
       rb = GetComponent<Rigidbody>();
   }
 
-  public void Update()
+  public void FixedUpdate()
   {
       if (speed>topspeed) {
         speed=topspeed;

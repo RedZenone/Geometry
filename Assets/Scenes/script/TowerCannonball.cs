@@ -45,7 +45,7 @@ public class TowerCannonball : MonoBehaviour
       line.SetPositions(positions);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //Animation+= Time.deltaTime;
         //Animation=Animation%5f;

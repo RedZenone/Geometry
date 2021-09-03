@@ -13,4 +13,9 @@ public class MainMenu : MonoBehaviour
         levels.active =true;
         play.active=false;
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

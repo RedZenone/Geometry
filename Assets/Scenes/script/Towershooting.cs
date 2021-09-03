@@ -42,7 +42,7 @@ public class Towershooting : MonoBehaviour
           tower.GetComponent<Tower>().Alzata();
           shootdelay=shoottimer;
           float x = Random.Range(-aimvariant, aimvariant);
-          float z = Random.Range(-aimvariant*2, aimvariant*4);
+          float z = Random.Range(0, aimvariant*4+(boat.GetComponent<Boatstearing>().currentspeed/3f));
           Vector3 newboatposition=  new Vector3(boat.transform.position.x+x,boat.transform.position.y,boat.transform.position.z+z);
           Debug.DrawLine(tower.transform.position, newboatposition, Color.green, 10f);
           Debug.Log("shoot");

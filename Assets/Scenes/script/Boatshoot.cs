@@ -43,7 +43,7 @@ public class Boatshoot : MonoBehaviour
     public GameObject sferaleft;
     public GameObject sferaright;
 
-    public void Update()
+    public void FixedUpdate()
     {
       //Q SHOTING
       if(shootdelayq<=0)
@@ -108,5 +108,7 @@ public class Boatshoot : MonoBehaviour
         }
       }
     }
+
+
 
 }

@@ -23,7 +23,7 @@ public class Cannonball : MonoBehaviour
     }
 
 
-    private void Update()
+    private void FixedUpdate()
     {
       transform.position += direction * Time.deltaTime * speed;
       //transform.Translate(Vector3.forward * Time.deltaTime * speed);
