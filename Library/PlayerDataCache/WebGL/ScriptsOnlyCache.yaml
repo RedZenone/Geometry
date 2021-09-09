@@ -988,7 +988,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 890d14674f1704ba561b7123eba3eae9
+      Hash: 7e3b18b2ba14bf80d683794d61cab359
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Boathealth
@@ -1442,4 +1442,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/LevelOne.unity
   - Assets/Scenes/LevelTwo.unity
   - Assets/Scenes/LevelThree.unity
-  playerPath: C:/Users/edef9/Desktop/geometria_webgl
+  playerPath: C:/Users/edef9/Desktop/simple/geometria_webgl

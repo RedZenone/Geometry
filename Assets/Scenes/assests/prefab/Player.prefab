@@ -618,6 +618,7 @@ MonoBehaviour:
   explosionpref: {fileID: 4724873579953750711, guid: 9a257d723f3d82e4ebd7f314143495e4,
     type: 3}
   tag: towerball
+  tag2: terrain
   victory: {fileID: 0}
   healthtext: {fileID: 0}
   health2text: {fileID: 0}
@@ -1613,6 +1614,7 @@ MonoBehaviour:
   boyancy4: {fileID: 0}
   explosionpref: {fileID: 0}
   tag: cannoball
+  tag2: 
   victory: {fileID: 0}
   healthtext: {fileID: 0}
   health2text: {fileID: 0}
@@ -1959,6 +1961,7 @@ MonoBehaviour:
   boyancy4: {fileID: 0}
   explosionpref: {fileID: 0}
   tag: cannoball
+  tag2: 
   victory: {fileID: 0}
   healthtext: {fileID: 0}
   health2text: {fileID: 0}
@@ -2715,6 +2718,7 @@ MonoBehaviour:
   boyancy4: {fileID: 0}
   explosionpref: {fileID: 0}
   tag: cannoball
+  tag2: 
   victory: {fileID: 0}
   healthtext: {fileID: 0}
   health2text: {fileID: 0}

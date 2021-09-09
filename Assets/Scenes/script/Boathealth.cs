@@ -13,6 +13,7 @@ public class Boathealth : MonoBehaviour
   public GameObject boyancy4;
   public GameObject explosionpref;
   public string tag;
+  public string tag2;
   public GameObject victory;
   private bool defeat=false;
   public Text healthtext;
@@ -34,6 +35,14 @@ public class Boathealth : MonoBehaviour
         boyancy3.GetComponent<Objfloat>().depthtreshold+=1f;
         boyancy4.GetComponent<Objfloat>().depthtreshold+=1f;
         boat.GetComponent<Boatstearing>().topspeed-=5;
+        healthtext.text=Health.ToString();
+        health2text.text=Health.ToString();
+    }
+
+    if(collision.gameObject.tag == tag2 && Health>0)
+    {
+        boat.GetComponent<Boatstearing>().speed=1;
+        boat.GetComponent<Boatstearing>().currentspeed=1;
         healthtext.text=Health.ToString();
         health2text.text=Health.ToString();
     }
